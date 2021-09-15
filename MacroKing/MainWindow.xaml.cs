@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Interceptor;
 
 namespace MacroKing
 {
@@ -20,9 +21,15 @@ namespace MacroKing
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool handler = false;
+
         public MainWindow()
         {
             InitializeComponent();
+            Input input = new Input();
+            input.KeyboardFilterMode = KeyboardFilterMode.All;
+
+            input.Load();
         }
     }
 }
