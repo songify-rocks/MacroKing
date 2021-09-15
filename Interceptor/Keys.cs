@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Interceptor
+﻿namespace Interceptor
 {
     public enum Keys : ushort
     {
